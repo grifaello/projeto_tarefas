@@ -5,7 +5,9 @@ const tarefas=[
 {id:"1",titulo:"aprender Git"},
 {id:"2",titulo:"aprender fazer Commit"},
   {id:"3",titulo:"aprender utilizar o Github"},
+  {id:"4",titulo:"Criar um novo commit"},
 ]
+
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>lista de tarefas</Text>
@@ -14,12 +16,10 @@ const tarefas=[
       data={tarefas}
       keyExtractor={(item)=>item.id}
       renderItem={({item})=>(
-        <Text style={{color: 'white'}}>{item.titulo}
+        <Text style={styles.item}>{item.titulo}
 
         </Text>
       )}
-
-
 
 
       />
@@ -30,13 +30,20 @@ const tarefas=[
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'pink',
+    backgroundColor: 'white',
     
   },
   titulo:{
     fontSize:48,
     fontWeight:'bold',
-    color:'white',
+    color:'dark blue',
     marginBottom:20
+  },
+
+  item: {
+    padding:15,
+    marginTop: 10,
+    backgroundColor:'lightgreen',
+    borderRadius:5
   }
 });
